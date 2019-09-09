@@ -1,3 +1,39 @@
 body {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("fantasy3.jpg")
+}
+
+#container {
+    background-color: rgba(86, 13, 155, 0.685);
+    border-radius: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 15%;
+    color: white;
+}
+
+h1 {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+button {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#namePlace {
+    background-color: rgba(86, 13, 155, 0.685);
+    border-radius: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
 }

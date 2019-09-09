@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>What does the Earth call you?</title>
+    <title>What is your Fantasy Name?</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<div id="container">
+    <h1 id="title">What is your Fantasy Name?</h1>
 
-    <input type="text" placeholder="name" id="userName"> Name
-    <br>
-    <input type="date" id="birthday"> Birthday
-    <br>
-    <button id="generate">Name me!</button>
-    <div id="namePlace"></div>
+    <div id="infoBox">
+        <div>Enter Your Birthday</div>
+        <input type="date" id="birthday">
+    </div>
     
+    <button id="generate">Name me!</button>
+</div>
+
+<div id="namePlace"></div>
+
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

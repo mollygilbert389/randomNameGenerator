@@ -576,64 +576,68 @@ $(document).ready(function() {
 
     }
 
+    $("#birthday").keypress(function(e) {
+        if (e.which === 13) {
+            $('#generate').click();
+        };
+    });
+
 
     $("#generate").on("click", function () {
-        console.log("clicked")
-    
-    let username = $("#userName").val().trim()
-    let birthday = $("#birthday").val()
-    let birthDate = new Date(birthday)
-    let month = birthDate.getMonth() + 1
-    let dayOfWeek = birthDate.getDay() + 1
-    let dayOfBirth = birthDate.getDate() + 1
+        $("#namePlace").empty()
+        let birthday = $("#birthday").val()
+        let birthDate = new Date(birthday)
+        let month = birthDate.getMonth() + 1
+        let dayOfWeek = birthDate.getDay() + 1
+        let dayOfBirth = birthDate.getDate() + 1
 
-    if (month === 1) {
-        nameInfo.january.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 1) {
+            nameInfo.january.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 2) {
-        nameInfo.february.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 2) {
+            nameInfo.february.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 3) {
-        nameInfo.march.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 3) {
+            nameInfo.march.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 4) {
-        nameInfo.april.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 4) {
+            nameInfo.april.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 5) {
-        nameInfo.may.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 5) {
+            nameInfo.may.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 6) {
-        nameInfo.june.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 6) {
+            nameInfo.june.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 7) {
-        nameInfo.july.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 7) {
+            nameInfo.july.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 8) {
-        nameInfo.august.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 8) {
+            nameInfo.august.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 9) {
-        nameInfo.september.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 9) {
+            nameInfo.september.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 10) {
-        nameInfo.october.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 10) {
+            nameInfo.october.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 11) {
-        nameInfo.november.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 11) {
+            nameInfo.november.calculate(dayOfBirth, dayOfWeek)
+        }
 
-    if (month === 12) {
-        nameInfo.december.calculate(dayOfBirth, dayOfWeek)
-    }
+        if (month === 12) {
+            nameInfo.december.calculate(dayOfBirth, dayOfWeek)
+        }
 })
 
 })
