@@ -598,11 +598,6 @@ $(document).ready(function() {
         dayOfBirth = parseInt(dayOfBirth)
 
 
-
-        console.log(month)
-        console.log(dayOfWeek)
-        console.log(dayOfBirth)
-
         if (month === 01) {
             nameInfo.january.calculate(dayOfBirth, dayOfWeek)
         }
