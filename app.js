@@ -184,6 +184,7 @@ $(document).ready(function() {
                 28: "Roy",
                 29: "Amari",
                 30: "Remus",
+
             },
             calculate: function(dayOfBirth, dayOfWeek) {
                 let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
@@ -587,43 +588,54 @@ $(document).ready(function() {
         $("#namePlace").empty()
         let birthday = $("#birthday").val()
         let birthDate = new Date(birthday)
-        let month = birthDate.getMonth() + 1
         let dayOfWeek = birthDate.getDay() + 1
-        let dayOfBirth = birthDate.getDate() + 1
 
-        if (month === 1) {
+        birthDate = moment(birthDate).add(1, 'days').calendar()
+
+        let month = moment(birthDate).format("MM")
+        month = parseInt(month)
+        let dayOfBirth = moment(birthDate).format("DD")
+        dayOfBirth = parseInt(dayOfBirth)
+
+
+
+        console.log(month)
+        console.log(dayOfWeek)
+        console.log(dayOfBirth)
+
+        if (month === 01) {
             nameInfo.january.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 2) {
+        if (month === 02) {
             nameInfo.february.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 3) {
+        if (month === 03) {
             nameInfo.march.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 4) {
+        if (month === 04) {
             nameInfo.april.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 5) {
+        if (month === 05) {
             nameInfo.may.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 6) {
+        if (month === 06) {
             nameInfo.june.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 7) {
+        if (month === 07) {
             nameInfo.july.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 8) {
+        if (month === 08) {
             nameInfo.august.calculate(dayOfBirth, dayOfWeek)
         }
 
-        if (month === 9) {
+        if (month === 09) {
             nameInfo.september.calculate(dayOfBirth, dayOfWeek)
         }
 
