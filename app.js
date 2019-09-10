@@ -55,7 +55,7 @@ $(document).ready(function() {
                 2: "Rustcore",
                 3: "Mercurian",
                 4: "Valetudo",
-                5: "Nightstar",
+                5: "Bridgetwater",
                 6:  "Hyperiontide",
                 7:  "Starrise"
             },
@@ -97,13 +97,13 @@ $(document).ready(function() {
         },
         march: {
             week : {
-                1: "Amalthea",
+                1: "Amalthean",
                 2: "Bloodshore",
-                3: "Hermeson",
+                3: "Hermesta",
                 4: "Ioeshine",
                 5: "Brightstar",
                 6:  "Pandawn",
-                7:  "Starsight"
+                7:  "Suncore"
             },
             day: {
                 1: "Hayden",
