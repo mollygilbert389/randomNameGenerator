@@ -113,7 +113,7 @@ $(document).ready(function() {
                 5: "Noah",
                 6: "Parker",
                 7: "Lane",
-                8: "Onoel",
+                8: "Oenel",
                 9: "Torian",
                 10: "Rodderick",
                 11: "Tavish",
@@ -252,7 +252,7 @@ $(document).ready(function() {
             day: {
                 1: "Prisma",
                 2: "Panne",
-                3: "Penny",
+                3: "Ashley",
                 4: "Ryan",
                 5: "Irebel",
                 6: "Robick",
