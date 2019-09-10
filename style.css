@@ -21,6 +21,15 @@ h1 {
 button {
     margin: 10px;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: rgb(4, 51, 4);
 }
 
 input {

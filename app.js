@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    const lastNameArray = []
+    const firstNameArray = []
+
     const nameInfo = {
         january: {
             week : {
@@ -646,6 +649,44 @@ $(document).ready(function() {
             nameInfo.december.calculate(dayOfBirth, dayOfWeek)
         }
 })
+
+    $("#randomize").on("click", function () {
+        const janLastNames = Object.values(nameInfo.january.week)
+        const febLastNames = Object.values(nameInfo.february.week)
+        const marchLastNames = Object.values(nameInfo.march.week)
+        const aprilLastNames = Object.values(nameInfo.april.week)
+        const mayLastNames = Object.values(nameInfo.may.week)
+        const juneLastNames = Object.values(nameInfo.june.week)
+        const julyLastNames = Object.values(nameInfo.july.week)
+        const augLastNames = Object.values(nameInfo.august.week)
+        const septLastNames = Object.values(nameInfo.september.week)
+        const octLastNames = Object.values(nameInfo.october.week)
+        const novLastNames = Object.values(nameInfo.november.week)
+        const decLastNames = Object.values(nameInfo.december.week)
+
+        const janFirstNames = Object.values(nameInfo.january.day)
+        const febFirstNames = Object.values(nameInfo.february.day)
+        const marchFirstNames = Object.values(nameInfo.march.day)
+        const aprilFirstNames = Object.values(nameInfo.april.day)
+        const mayFirstNames = Object.values(nameInfo.may.day)
+        const juneFirstNames = Object.values(nameInfo.june.day)
+        const julyFirstNames = Object.values(nameInfo.july.day)
+        const augFirstNames = Object.values(nameInfo.august.day)
+        const septFirstNames = Object.values(nameInfo.september.day)
+        const octFirstNames = Object.values(nameInfo.october.day)
+        const novFirstNames = Object.values(nameInfo.november.day)
+        const decFirstNames = Object.values(nameInfo.december.day)
+
+        lastNameArray.push(janLastNames, febLastNames, marchLastNames, aprilLastNames, mayLastNames, juneLastNames, julyLastNames, augLastNames, septLastNames, octLastNames, novLastNames, decLastNames)
+        newLastArray = lastNameArray[Math.floor(Math.random()*lastNameArray.length)]
+        randomLastName = newLastArray[Math.floor(Math.random()*newLastArray.length)]
+
+        firstNameArray.push(janFirstNames, febFirstNames, marchFirstNames, aprilFirstNames, mayFirstNames, juneFirstNames, julyFirstNames, augFirstNames, septFirstNames, octFirstNames, novFirstNames, decFirstNames)
+        newFirstArray = firstNameArray[Math.floor(Math.random()*firstNameArray.length)]
+        randomFirstName = newFirstArray[Math.floor(Math.random()*newFirstArray.length)]
+
+        $("#namePlace").text(randomFirstName + " " +  randomLastName)
+    })
 
 })
 
