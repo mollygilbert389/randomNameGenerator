@@ -46,3 +46,12 @@ input {
     margin-top: 10px;
     color: white;
 }
+
+.check {
+
+}
+
+#checkboxes {
+    display: flex;
+    justify-content: center;
+}

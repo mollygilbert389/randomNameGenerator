@@ -15,41 +15,46 @@ $(document).ready(function() {
                 7:  "Sunstorm"
             },
             day: {
-                1: "Ellis",
-                2: "Kaidan",
-                3: "Ellery",
-                4: "Galen",
-                5: "Uriel",
-                6: "West",
-                7: "Davin",
-                8: "Skylar",
-                9: "Tatum",
-                10: "Amber",
-                11: "Ferther",
-                12: "Kina",
-                13: "Erin",
-                14: "Thane",
-                15: "Haven",
-                16: "Holden",
-                17: "Rory",
-                18: "Daire",
-                19: "Archer",
-                20: "Fox",
-                21: "Carmen",
-                22: "Zack",
-                23: "Ripley",
-                24: "Ender",
-                25: "Bay",
-                26: "Echo",
-                27: "Noel",
-                28: "Angel",
-                29: "Quinn",
-                30: "Morganna",
-                31: "Weley",
-            },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+                1: {female: "Elias", male: "Ellis"},
+                2:  {female:"Mary Anne", male: "Kaidan" },
+                3:  {female:"Genevive", male: "Ellery" },
+                4:  {female:"Gewn", male: "Galen" },
+                5:  {female:"Uriel", male: "Uriel" },
+                6:  {female:"Rose", male: "West" },
+                7:  {female:"Loreleigh", male: "Davin" },
+                8:  {female:"Autmun", male: "Skylar" },
+                9:  {female:"Annabell", male: "Tatum" },
+                10: {female: "Amber", male: "Avery" },
+                11: {female: "Bonnie",  male: "Ferther" },
+                12: {female: "Grace", male: "Ryan" },
+                13: {female: "Fiona", male: "Erin" },
+                14: {female: "Jewel", male: "Thane" },
+                15: {female: "Bellatrix", male: "Haven" },
+                16: {female: "Hazel", male: "Holden" },
+                17: {female: "Rory", male: "Rory" },
+                18: {female: "Cassandra", male: "Daire" },
+                19: {female: "Archer", male: "Archer" },
+                20: {female: "Fox", male: "Fox" },
+                21: {female: "Carmen", male: "Mason" },
+                22: {female: "Sylvia", male: "Zack" },
+                23: {female: "Ripley", male: "Ripley" },
+                24: {female: "Ender", male: "Ender" },
+                25: {female: "Bay", male: "Bay" },
+                26: {female: "Echo", male: "Adrian" },
+                27: {female: "Noel", male: "Ian" },
+                28: {female: "Belle", male: "Darren" },
+                29: {female: "Quinn", male: "Quinn" },
+                30: {female: "Morganna", male: "Morgan" },
+                31: {female: "Fleur", male: "Neil" },
+            }, 
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         },
         february: {
@@ -58,92 +63,102 @@ $(document).ready(function() {
                 2: "Rustcore",
                 3: "Mercurian",
                 4: "Valetudo",
-                5: "Bridgetwater",
+                5: "Nightstar",
                 6:  "Hyperiontide",
                 7:  "Starrise"
             },
             day: {
-                1: "Kendall",
-                2: "Holew",
-                3: "Justice",
-                4: "Sage",
-                5: "Zhora",
-                6: "Perry",
-                7: "Poyel",
-                8: "Sonya",
-                9: "Cecil",
-                10: "Samara",
-                11: "Tory",
-                12: "Jasper",
-                13: "Liron",
-                14: "Jude",
-                15: "Autumn",
-                16: "Thorin",
-                17: "Devlin",
-                18: "Cade",
-                19: "Julian",
-                20: "Rain",
-                21: "Finley",
-                22: "Blaze",
-                23: "Griffolk",
-                24: "Wynn",
-                25: "Willow",
-                26: "Winter",
-                27: "Forest",
-                28: "Corbin",
-                29: "Eleleth",
+                1:  {female: "Kendall",  male: "Kendall"},
+                2:  {female: "Evelin", male: "Caleb"},
+                3:  {female: "Lilly", male: "Brice"},
+                4:  {female: "Sage", male: "Colin"},
+                5:  {female: "Zhora", male: "Troy"},
+                6:  {female: "Perry", male: "Perry"},
+                7:  {female: "Jelene", male: "Cole"},
+                8:  {female: "Sonya", male: "Noah"},
+                9:  {female: "Cecilla", male: "Cecil"},
+                10: {female:  "Samara", male: "Lee"},
+                11: {female:  "Evian", male: "Brandon"},
+                12: {female:  "Daria", male: "Jasper"},
+                13: {female:  "Iris", male: "Leron"},
+                14: {female:  "Jade", male: "Jude"},
+                15: {female:  "Nicole", male: "Riley"},
+                16: {female:  "Scarlette", male: "Thorin"},
+                17: {female:  "Clover", male: "Devlin"},
+                18: {female:  "Ivy", male: "Cade"},
+                19: {female:  "Julise", male: "Julian"},
+                20: {female:  "Rain", male: "Grant"},
+                21: {female:  "Lacy", male: "Finley"},
+                22: {female:  "Delilah", male: "Jace"},
+                23: {female:  "Annquinette", male: "Heath"},
+                24: {female:  "Winny", male: "Wynn"},
+                25: {female:  "Willow",  male: "Bailey" },
+                26: {female:  "Winter", male: "Brent" },
+                27: {female:  "Ebony", male: "Forest" },
+                28: {female:  "Brooke", male: "Corbin" },
+                29: {female:  "Aurora", male: "Eleleth" },
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         },
         march: {
             week : {
-                1: "Amalthean",
+                1: "Amalthea",
                 2: "Bloodshore",
-                3: "Hermesta",
+                3: "Hermeson",
                 4: "Ioeshine",
                 5: "Brightstar",
                 6:  "Pandawn",
-                7:  "Suncore"
+                7:  "Starsight"
             },
             day: {
-                1: "Hayden",
-                2: "Achos",
-                3: "Luna",
-                4: "Anes",
-                5: "Noah",
-                6: "Parker",
-                7: "Lane",
-                8: "Oenel",
-                9: "Torian",
-                10: "Rodderick",
-                11: "Tavish",
-                12: "Harley",
-                13: "Oden",
-                14: "Ren",
-                15: "Ira",
-                16: "Raven",
-                17: "Nova",
-                18: "Edmund",
-                19: "Orion",
-                20: "Marut",
-                21: "Anabur",
-                22: "Dylan",
-                23: "Volt",
-                24: "Reese",
-                25: "Cullen",
-                26: "Owan",
-                27: "Jade",
-                28: "Summer",
-                29: "Talon",
-                30: "Shea",
-                31: "Emerson",
+                1:  {female:"Hayden", male: "Hayden" }, 
+                2:  {female:"Andrea", male: "Ethan" },
+                3:  {female:"Luna", male: "Jacob" },
+                4:  {female:"Anes", male: "Gabriel" },
+                5:  {female:"Natalia", male: "Gareth" },
+                6:  {female: "Natasha", male: "Parker" },
+                7:  {female:"Lane", male: "Lane" },
+                8:  {female:"Onoel", male: "Aiden" },
+                9:  {female: "Rudy", male: "Torian" },
+                10: {female: "Annette",  male: "Rodderick"},
+                11: {female: "Ava", male: "Tavish"},
+                12: {female: "Eve", male: "Harley"},
+                13: {female: "Daisy", male: "Oden"},
+                14: {female: "Ren", male: "Ren"},
+                15: {female: "Fiona", male: "Ira"},
+                16: {female: "Raven", male: "Seth"},
+                17: {female: "Gwendolyn", male: "Benjamen"},
+                18: {female: "Jillian", male: "Edmund"},
+                19: {female: "Orion", male: "Orion"},
+                20: {female: "Violet", male: "Matthew"},
+                21: {female: "Valerie", male: "Anabur"},
+                22: {female: "Dylan", male: "Wesley"},
+                23: {female: "Jasmine", male: "Damom"},
+                24: {female: "Clio", male: "Reese"},
+                25: {female: "Collins", male: "Collins"},
+                26: {female: "Tristessa", male: "Owen"},
+                27: {female: "Jade", male: "Lyndon"},
+                28: {female: "Summer", male: "Leland"},
+                29: {female: "Amberly", male: "Talon"},
+                30: {female: "Shea", male: "Nash"},
+                31: {female: "Cordelia", male: "Emerson"},
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         }, 
         april: {
@@ -157,41 +172,45 @@ $(document).ready(function() {
                 7:  "Goldenstar"
             },
             day: {
-                1: "Axis",
-                2: "Rowan",
-                3: "Finian",
-                4: "Lake",
-                5: "Dutch",
-                6: "Metatron",
-                7: "River",
-                8: "Clover",
-                9: "Elora",
-                10: "Morgan",
-                11: "Azrael",
-                12: "Hadriel",
-                13: "Zion",
-                14: "Cassio",
-                15: "Aego",
-                16: "Adriel",
-                17: "Pearl",
-                18: "Ocean",
-                19: "Phelan",
-                20: "Sawyer",
-                21: "Taylor",
-                22: "Opal",
-                23: "Riley",
-                24: "Adriel",
-                25: "Onoel",
-                26: "Robin",
-                27: "Arthur",
-                28: "Roy",
-                29: "Amari",
-                30: "Remus",
-
+                1:  {female: "Dawm",  male: "Ace" },
+                2:  {female: "Rowan", male: "Rowan" },
+                3:  {female: "Lynette", male: "Finian" },
+                4:  {female: "Alexa", male: "Alexander"},
+                5:  {female: "Vanessa",male: "Dutch"},
+                6:  {female: "Audrey", male: "Paris"},
+                7:  {female: "Norah",male: "River"},
+                8:  {female: "Clover", male: "Nathaniel"},
+                9:  {female: "Elora", male: "Ethan"},
+                10: {female:  "Morgan", male: "Morgan"},
+                11: {female:  "Azrael", male: "Darrem"},
+                12: {female:  "Haley", male: "Hadriel"},
+                13: {female:  "Juliette", male: "Bradley"},
+                14: {female:  "Ava", male: "Cassio"},
+                15: {female:  "Holly", male: "Connor"},
+                16: {female:  "Adriel", male: "Tyler"},
+                17: {female:  "Pearl", male: "Mason"},
+                18: {female:  "Abigail", male: "Donte"},
+                19: {female:  "Wendy", male: "Hunter"},
+                20: {female:  "Marilyn", male: "Sawyer"},
+                21: {female:  "Taylor", male: "Taylor"},
+                22: {female:  "Opal", male: "Colby"},
+                23: {female:  "Lenorah", male: "Riley"},
+                24: {female:  "Giselle", male: "Trevor"},
+                25: {female:  "Onoel", male: "Coby"},
+                26: {female:  "Robin",  male: "Robin"},
+                27: {female:  "Contessa", male: "Arthur"},
+                28: {female:  "Amalia", male: "Roy"},
+                29: {female:  "Amara", male: "Amari"},
+                30: {female:  "Lucy", male: "Remus"},
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         },
         may: {
@@ -205,41 +224,46 @@ $(document).ready(function() {
                 7:  "Sunstone"
             },
             day: {
-                1: "Blake",
-                2: "Raisa",
-                3: "Trillian",
-                4: "Atom",
-                5: "Brette",
-                6: "Tanner",
-                7: "Avalon",
-                8: "Theia",
-                9: "Trinity",
-                10: "Caden",
-                11: "Nyeve",
-                12: "Eve",
-                13: "Idris",
-                14: "Lystra",
-                15: "Vane",
-                16: "Kane",
-                17: "Cleo",
-                18: "Everard",
-                19: "Lyra",
-                20: "Helene",
-                21: "Celeste",
-                22: "Crystal",
-                23: "Kiall",
-                24: "Ish",
-                25: "Ikaria",
-                26: "Rein",
-                27: "Ilyris",
-                28: "Fynn",
-                29: "Jane",
-                30: "Vylan",
-                31: "Roe",
+                1:  {female:"Blake",  male: "Blake"},
+                2:  {female:"Raisa", male: "Bryan"},
+                3:  {female: "Veronica",  male: "Trillian"},
+                4:  {female: "Roslyn", male: "Cole"},
+                5:  {female: "Brette", male: "Brette"},
+                6:  {female: "Adrianna", male: "Tanner"},
+                7:  {female: "Esme", male: "Avalon"},
+                8:  {female: "Theia", male: "Randel"},
+                9:  {female: "Trinity", male: "Tate"},
+                10: {female: "Camilla", male: "Caden"},
+                11: {female: "Nyeve", male: "Hadrian"},
+                12: {female: "Eve", male: "Amarand"},
+                13: {female: "Regina", male: "Idris"},
+                14: {female: "Emeline", male: "Grigori"},
+                15: {female: "Florence", male: "Ullric"},
+                16: {female: "Cleonetta", male: "Kane"},
+                17: {female: "Jocelyn", male: "Bennett"},
+                18: {female: "Lyanne", male: "Everard"},
+                19: {female: "Lyra", male: "Brogan"},
+                20: {female: "Helene", male: "Neilson"},
+                21: {female: "Celeste", male: "Audric"},
+                22: {female: "Crystal", male: "Alywin"},
+                23: {female: "Josephina", male: "Kiall"},
+                24: {female: "Taliah", male: "Ish"},
+                25: {female: "Viviane", male: "Paige"},
+                26: {female: "Isolde", male: "Rein"},
+                27: {female: "Amiria", male: "Ilyris"},
+                28: {female: "Sabrina", male: "Fynn"},
+                29: {female: "Millicent", male: "Jane"},
+                30: {female: "Vylan", male: "Lawrence"},
+                31: {female: "Roe", male: "Harding"},
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         },
         june: {            
@@ -253,40 +277,45 @@ $(document).ready(function() {
                 7:  "Sunbolt"
             },
             day: {
-                1: "Prisma",
-                2: "Panne",
-                3: "Ashley",
-                4: "Ryan",
-                5: "Irebel",
-                6: "Robick",
-                7: "Aria",
-                8: "Gaia",
-                9: "Zalie",
-                10: "Elric",
-                11: "Raya",
-                12: "Vala",
-                13: "Venrie",
-                14: "Atlas",
-                15: "Hastos",
-                16: "Attis",
-                17: "Crios",
-                18: "Eros",
-                19: "Ocenus",
-                20: "Zelus",
-                21: "Braug",
-                22: "Vali",
-                23: "Balin",
-                24: "Floi",
-                25: "Dain",
-                26: "Frostar",
-                27: "Gisli",
-                28: "Gylvia",
-                29: "Javari",
-                30: "Killin",
+                1:  {female: "Prisma",  male: "Luke"},
+                2:  {female: "Penny", male: "Edwin"},
+                3:  {female: "Liecia", male: "Nicholas"},
+                4:  {female: "Joanna", male: "Jonas"},
+                5:  {female: "Irebel", male: "Warren"},
+                6:  {female: "Beatrice", male: "Robick"},
+                7:  {female: "Aria", male: "Aria"},
+                8:  {female: "Alina", male: "Ralph"},
+                9:  {female: "Zalie", male: "William"},
+                10: {female: "Susanna", male: "Elric"},
+                11: {female: "Raya", male: "Jordan"},
+                12: {female: "Valya", male: "Tristian"},
+                13: {female: "Valerie", male: "Valentine"},
+                14: {female: "Lora", male: "Atlas"},
+                15: {female: "Clarice", male: "Robert"},
+                16: {female: "Allison", male: "Attis"},
+                17: {female: "Melusina", male: "Rylan"},
+                18: {female: "Relia", male: "Eros"},
+                19: {female: "Feyette", male: "Radley"},
+                20: {female: "Hadley", male: "Wallace"},
+                21: {female: "Luella", male: "Wayne"},
+                22: {female: "Vali", male: "Winston"},
+                23: {female: "Baylin", male: "Baylin"},
+                24: {female: "Farah", male: "Ashton"},
+                25: {female: "Marigold", male: "Dain"},
+                26: {female: "Hollis", male: "Hollis"},
+                27: {female: "Dae", male: "Barric"},
+                28: {female: "Olive", male: "Bentley"},
+                29: {female: "Donelle", male: "Booker"},
+                30: {female: "Ellette", male: "Killin"},
                 },
-                calculate: function(dayOfBirth, dayOfWeek) {
-                    let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+                calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                    if (radioBtn === "female") {
+                    let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                     $("#namePlace").append(generatedName)
+                } else {
+                    let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                    $("#namePlace").append(generatedName)
+                }
                 }
         },
         july: {
@@ -300,41 +329,46 @@ $(document).ready(function() {
                 7:  "Sunglow"
             },
             day: {
-                1: "Ella",
-                2: "Narssi",
-                3: "Beltram",
-                4: "Jace",
-                5: "Milo",
-                6: "Henns",
-                7: "Jacoby",
-                8: "Ellery",
-                9: "Benson",
-                10: "Minerva",
-                11: "Ryan",
-                12: "Missy",
-                13: "Harper",
-                14: "Neive",
-                15: "Yorick",
-                16: "Elric",
-                17: "Tress",
-                18: "Vello",
-                19: "Nelkam",
-                20: "Huran",
-                21: "Crane",
-                22: "Felix",
-                23: "Wes",
-                24: "Helloc",
-                25: "Mobine",
-                26: "Iki",
-                27: "Bellarose",
-                28: "Estelle",
-                29: "Mack",
-                30: "Markus",
-                31: "Oden",
+                1:  {female: "Ella", male: "Bolton"},
+                2:  {female: "Narssi",  male: "Beval"},
+                3:  {female: "Diana", male: "Beltram"},
+                4:  {female: "Blossom", male: "Jace"},
+                5:  {female: "Avellana", male: "Milo"},
+                6:  {female: "Bliss", male: "Henns"},
+                7:  {female: "Arietta", male: "Jacoby"},
+                8:  {female: "Channel", male: "Ellery"},
+                9:  {female: "Posy", male: "Benson"},
+                10: {female: "Minerva", male: "Allister"},
+                11: {female: "Rosette", male: "Aland"},
+                12: {female: "Missy",  male:  "Amherst"},
+                13: {female: "Harper", male: "Harper"},
+                14: {female: "Neivette", male: "Neive"},
+                15: {female: "Roxanna", male: "Yorick"},
+                16: {female: "Tatiana", male: "Elric"},
+                17: {female: "Velma", male: "Tress"},
+                18: {female: "Tianna", male: "Vello"},
+                19: {female: "Sapphire", male: "Allard"},
+                20: {female: "Rhiannon", male: "Huran"},
+                21: {female: "Olthea", male: "Crane"},
+                22: {female: "Merry", male: "Felix"},
+                23: {female: "Brighton", male: "Wes"},
+                24: {female: "Whitney",  male: "Whitney"},
+                25: {female: "Corliss", male: "Godwim"},
+                26: {female: "Isis", male:"Iki"},
+                27: {female: "Bellarose", male: "Auden"},
+                28: {female: "Estelle", male:"Barse"},
+                29: {female: "Elvina", male:"Mack"},
+                30: {female: "Della", male:"Markus"},
+                31: {female: "Gwendolyn", male:"Oden"},
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         },
         august: {            
@@ -348,41 +382,46 @@ $(document).ready(function() {
                 7:  "Sunray"
                 },
             day: {
-                1: "Verus",
-                2: "Sernick",
-                3: "Leo",
-                4: "Pine",
-                5: "Justi",
-                6: "Noi",
-                7: "Northwan",
-                8: "Easten",
-                9: "Weston",
-                10: "Rio",
-                11: "Brana",
-                12: "Erla",
-                13: "Gemma",
-                14: "Misty",
-                15: "Brock",
-                16: "Ash",
-                17: "Cyane",
-                18: "Keeta",
-                19: "Marsh",
-                20: "Astor",
-                21: "Vera",
-                22: "Noble",
-                23: "Cheena",
-                24: "Benjin",
-                25: "Thorn",
-                26: "Ostero",
-                27: "Billan",
-                28: "Fredrick",
-                29: "Pod",
-                30: "Rivven",
-                31: "Colax",
+                1:  {female: "Eden", male: "Veras"},
+                2:  {female: "Rosalind",  male: "Hugh"},
+                3:  {female: "Luissa", male: "Leo"},
+                4:  {female: "Helueua", male: "Pine"},
+                5:  {female: "Jossy", male: "Godfry"},
+                6:  {female: "Geva", male: "Barrett"},
+                7:  {female: "Tillie", male: "Jarrett"},
+                8:  {female: "Melisenda", male: "Northwan"},
+                9:  {female: "Orella", male: "Easten"},
+                10: {female: "Gailina", male: "Weston"},
+                11: {female: "Emma", male: "Rio"},
+                12: {female: "Erla", male: "Brana"},
+                13: {female: "Gemma", male: "Burne"},
+                14: {female: "Misty", male: "Brenner"},
+                15: {female: "Avin", male: "Brock"},
+                16: {female: "Acelina", male: "Ash"},
+                17: {female: "Clarissa", male: "Cyane"},
+                18: {female: "Amiria", male: "Thomas"},
+                19: {female: "Constance", male: "Marsh"},
+                20: {female: "Philippa", male: "Astor"},
+                21: {female: "Vera", male: "Martin"},
+                22: {female: "Lucille", male: "Noble"},
+                23: {female: "Cheena", male: "Walter"},
+                24: {female: "Gina", male: "Benjin"},
+                25: {female: "Samantha", male: "Thorn"},
+                26: {female: "Martha Anne", male: "Ostero"},
+                27: {female: "Edith", male: "Billan"},
+                28: {female: "Daphne", male: "Fredrick"},
+                29: {female: "Alita", male: "Fordwin"},
+                30: {female: "Evorea", male: "Rivven"},
+                31: {female: "Faun", male: "Colax"}
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         },
         september: {
@@ -396,40 +435,45 @@ $(document).ready(function() {
                 7:  "Sunsight"
             },
             day: {
-                1: "Tova",
-                2: "Visi",
-                3: "Lance",
-                4: "Gawain",
-                5: "Percival",
-                6: "Sir Kay",
-                7: "Bran",
-                8: "Merlin",
-                9: "Vivine",
-                10: "Tarlon",
-                11: "Edvine",
-                12: "Joshua",
-                13: "Kimee",
-                14: "Stalios",
-                15: "Rippen",
-                16: "Rip",
-                17: "Redwin",
-                18: "Klame",
-                19: "Heron",
-                20: "Hernon",
-                21: "Michelle",
-                22: "Romeo",
-                23: "Juliet",
-                24: "Portia",
-                25: "Roaslind",
-                26: "Puck",
-                27: "Viola",
-                28: "Laertes",
-                29: "Tybalt",
-                30: "Ariel",
+                1:  {female: "Tova", male: "Jorrin"},
+                2:  {female: "Visi", male: "Hilton"},
+                3:  {female: "June", male: "Lance"},
+                4:  {female: "Mirabella", male: "Gawain"},
+                5:  {female: "Octavia", male: "Percival"},
+                6:  {female: "Odessa",  male: "Sir Kay"},
+                7:  {female: "Rosella", male: "Bran"},
+                8:  {female: "Ruelle", male: "Merlin"},
+                9:  {female: "Vivine", male: "Hammond"},
+                10: {female:  "Dorothea", male: "Tarlon"},
+                11: {female:  "Edvine", male: "James"},
+                12: {female:  "Jocelyn", male: "Joshua"},
+                13: {female:  "Arwen", male: "Kimee"},
+                14: {female:  "Celestia", male: "Stalios"},
+                15: {female:  "Elowyn", male: "Rippen"},
+                16: {female:  "Elora", male: "Rip"},
+                17: {female:  "Elys", male: "Redwin"},
+                18: {female:  "Illyria", male: "Harvey"},
+                19: {female:  "Medora", male: "Heron"},
+                20: {female:  "Rhodeia", male: "Hernon"},
+                21: {female:  "Solenne", male: "Michelle"},
+                22: {female:  "Solstice", male: "Romeo"},
+                23: {female:  "Juliet", male: "Julian"},
+                24: {female:  "Portia", male: "Lindsey"},
+                25: {female:  "Roaslind",  male: "Theobald"},
+                26: {female:  "Usrula", male: "Puck"},
+                27: {female:  "Viola", male: ""},
+                28: {female:  "Serena", male: "Laertes"},
+                29: {female:  "Venus", male: "Tybalt"},
+                30: {female:  "Ariel", male: "Roger"},
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         }, 
         october: {            
@@ -443,41 +487,46 @@ $(document).ready(function() {
                 7:  "Brightstar"
             },
             day: {
-                1: "Lysander",
-                2: "Duncan",
-                3: "Othello",
-                4: "Desdamona",
-                5: "Falstaff",
-                6: "Antonio",
-                7: "Aaron",
-                8: "Boyet",
-                9: "Anne",
-                10: "Jack",
-                11: "Curio",
-                12: "Davy",
-                13: "Dion",
-                14: "Duke",
-                15: "Emilia",
-                16: 'Fang',
-                17: "Fortinbras",
-                18: "Ghost",
-                19: "Owen",
-                20: "Grey",
-                21: "Iris",
-                22: "Iras",
-                23: "Night",
-                24: "Ellenore",
-                25: "Cohen",
-                26: "Brady",
-                27: "Adler",
-                28: "Beckette",
-                29: "Jennings",
-                30: "Nash",
-                31: "Penn",
+                1:  {female: "Artemis",  male: "Lysander"},
+                2:  {female: "Frida", male: "Duncan"},
+                3:  {female: "Desdemona", male: "Othello"},
+                4:  {female: "Helenia", male: "Emmett"},
+                5:  {female: "Halette", male: "Falstaff"},
+                6:  {female: "Antonia", male: "Antonio"},
+                7:  {female: "Elwin", male: "Aaron"},
+                8:  {female: "Ilene", male: "Boyet"},
+                9:  {female: "Anne", male: "Baxter"},
+                10: {female:  "Brianna", male: "Jack"},
+                11: {female:  "Tabitha", male: "Ace"},
+                12: {female:  "Willamina", male: "Davy"},
+                13: {female:  "Dion", male: "Dion"},
+                14: {female:  "Yvonnette", male: "Duke"},
+                15: {female:  "Emilia", male: "Arnald"},
+                16: {female:  "Yviene", male: "Fang"},
+                17: {female:  "Onessa",  male: "Fortinbras"},
+                18: {female:  "Galina", male: "Gladwin"},
+                19: {female:  "Rhyanon", male: "Owen"},
+                20: {female:  "Lolinda", male: "Grey"},
+                21: {female:  "Iris", male: "Ernest"},
+                22: {female:  "Kressara", male: "Olivia"},
+                23: {female:  "Destinee", male: "Night"},
+                24: {female:  "Ellenore", male: "Erwin"},
+                25: {female:  "Dylena", male: "Cohen"},
+                26: {female:  "Diya", male: "Brady"},
+                27: {female:  "Annalyn", male: "Adler"},
+                28: {female:  "Joan", male: "Beckette"},
+                29: {female:  "Clarice", male: "Jennings"},
+                30: {female:  "Sybille", male: "Nash"},
+                31: {female:  "Circe", male: "Penn"},
             },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            }
             }
         },
         november: {            
@@ -491,40 +540,45 @@ $(document).ready(function() {
                 7:  "Brightmoon"
                 },
             day: {
-                1: "Stone",
-                2: "Sullivan",
-                3: "Addison",
-                4: "Bellamy",
-                5: "Blaine",
-                6: "Cassidy",
-                7: "Monroe",
-                8: "Olly",
-                9: "Leif",
-                10: "Aelric",
-                11: "Godwin",
-                12: "Torkel",
-                13: "Godric",
-                14: "Wulf",
-                15: "Wulfwin",
-                16: "Robert",
-                17: "Tori",
-                18: "Leofric",
-                19: "Edric",
-                20: "Osgood",
-                21: "Ailwin",
-                22: "Herlewin",
-                23: "Jordan",
-                24: "Olivia",
-                25: "Umfrey",
-                26: "Gilbert",
-                27: "Bennet",
-                28: "Bela",
-                29: "Baldric",
-                30: "Terric",
+                1:  {female:  "Narisa",  male: "Forwin"},
+                2:  {female:  "Lina", male: "Sullivan"},
+                3:  {female:  "Addison", male: "Addison"},
+                4:  {female:  "Jessica", male: "Bellamy"},
+                5:  {female:  "Nyx", male: "Blaine"},
+                6:  {female:  "Cassidy", male: "Bardon"},
+                7:  {female:  "Monroe", male: "Monroe"},
+                8:  {female:  "Selene", male: "Olly"},
+                9:  {female:  "Evian", male: "Leif"},
+                10: {female:  "Avalon", male: "Aelric"},
+                11: {female:  "Elise", male: "Godwin"},
+                12: {female:  "Lila", male: "Torkel"},
+                13: {female:  "Victoria", male: "Godric"},
+                14: {female:  "Silvia", male: "Wulf"},
+                15: {female:  "Azalia", male: "Wulfwin"},
+                16: {female:  "Magnolia", male: "Robert"},
+                17: {female:  "Buttercup", male: "Tori"},
+                18: {female:  "Cora", male: "Leofric"},
+                19: {female:  "Dahlia", male: "Edric"},
+                20: {female:  "Danica", male: "Osgood"},
+                21: {female:  "Flossy", male: "Ailwin"},
+                22: {female:  "Herlewin", male: "Allard"},
+                23: {female:  "Heather",  male: "Jordan"},
+                24: {female:  "Olivia", male: "Anakin"},
+                25: {female:  "Poppy", male: "Umfrey"},
+                26: {female:  "Patience", male: "Gilbert"},
+                27: {female:  "Temperance", male: "Bennet"},
+                28: {female:  "Jonquil", male: "Toby"},
+                29: {female:  "Lady", male: "Baldric"},
+                30: {female:  "Lavender", male: "Terric"},
                 },
-                calculate: function(dayOfBirth, dayOfWeek) {
-                    let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+                calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                    if (radioBtn === "female") {
+                    let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
                     $("#namePlace").append(generatedName)
+                } else {
+                    let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
+                    $("#namePlace").append(generatedName)
+                }
                 }
         },
         december: {
@@ -538,46 +592,49 @@ $(document).ready(function() {
                 7:  "Brightmorning"
                 },
             day: {
-                1: "Gladwin",
-                2: "Colin",
-                3: "Nicola",
-                4: "Oswyn",
-                5: "Marion",
-                6: "Julian",
-                7: "Bows",
-                8: "Barley",
-                9: "Blithe",
-                10: "Clarell",
-                11: "Collins",
-                12: "Dew",
-                13: "Dale",
-                14: "Deme",
-                15: "Gill",
-                16: "Lacy",
-                17: "Otter",
-                18: "Rodes",
-                19: "Ridley",
-                20: "Shirley",
-                21: "Spicer",
-                22: "Wade",
-                23: "Yorke",
-                24: "Wyndell",
-                25: "White",
-                26: "Venell",
-                27: "Rys",
-                28: "Rowlyn",
-                29: "Porter",
-                30: "Price",
-                31: "Nevet",
+                1:  {female: "May", male: "Gladwin"},
+                2:  {female: "Colin", male: "Aldis"},
+                3:  {female: "Pansy", male: "Nicola"},
+                4:  {female: "Oswyn", male: "Oswyn"},
+                5:  {female: "Marion", male: "Marion"},
+                6:  {female: "Viola", male: "Archie"},
+                7:  {female: "Briar", male: "Bows"},
+                8:  {female: "Geillis", male: "Barley"},
+                9:  {female: "Blithe", male: "Quincy"},
+                10: {female:  "Helenia", male: "Clarell"},
+                11: {female:  "Katlyn",  male: "Arley"},
+                12: {female:  "Dew", male: "Andre"},
+                13: {female:  "Myra", male: "Dale"},
+                14: {female:  "Demi", male: "Demi"},
+                15: {female:  "Sunete", male: "Gill"},
+                16: {female:  "Lacy", male: "Branton"},
+                17: {female:  "Acacia", male: "Otto"},
+                18: {female:  "Faylinn", male: "Rodes"},
+                19: {female:  "Fossette", male: "Ridley"},
+                20: {female:  "Shirley", male: "Chay"},
+                21: {female:  "Lunette", male: "Spicer"},
+                22: {female:  "Nolana", male: "Wade"},
+                23: {female:  "Trixy", male: "Yorke"},
+                24: {female:  "Loxy", male: "Wyndell"},
+                25: {female:  "Fay", male: "Conrad"},
+                26: {female:  "Venell", male: "Brody"},
+                27: {female:  "Rys", male: "Beck"},
+                28: {female:  "Evvie", male: "Rowlyn"},
+                29: {female:  "Delicia",  male: "Porter"},
+                30: {female:  "Clairette", male: "Price"},
+                31: {female:  "Nevette", male: "Nielle"},
                 },
-            calculate: function(dayOfBirth, dayOfWeek) {
-                let generatedName = this.day[dayOfBirth] + " " + this.week[dayOfWeek]  
+            calculate: function(dayOfBirth, dayOfWeek, radioBtn) {
+                if (radioBtn === "female") {
+                let generatedName = this.day[dayOfBirth].female + " " + this.week[dayOfWeek]  
+                $("#namePlace").append(generatedName)
+            } else {
+                let generatedName = this.day[dayOfBirth].male + " " + this.week[dayOfWeek]  
                 $("#namePlace").append(generatedName)
             }
+            }
+            
         }
-
-
-
     }
 
     $("#birthday").keypress(function(e) {
@@ -586,12 +643,12 @@ $(document).ready(function() {
         };
     });
 
-
     $("#generate").on("click", function () {
         $("#namePlace").empty()
         let birthday = $("#birthday").val()
         let birthDate = new Date(birthday)
         let dayOfWeek = birthDate.getDay() + 1
+        let radioBtn = $("input[name=gender]:checked").val()
 
         birthDate = moment(birthDate).add(1, 'days').calendar()
 
@@ -602,51 +659,51 @@ $(document).ready(function() {
 
 
         if (month === 01) {
-            nameInfo.january.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.january.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 02) {
-            nameInfo.february.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.february.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 03) {
-            nameInfo.march.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.march.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 04) {
-            nameInfo.april.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.april.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 05) {
-            nameInfo.may.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.may.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 06) {
-            nameInfo.june.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.june.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 07) {
-            nameInfo.july.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.july.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 08) {
-            nameInfo.august.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.august.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 09) {
-            nameInfo.september.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.september.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 10) {
-            nameInfo.october.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.october.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 11) {
-            nameInfo.november.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.november.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 
         if (month === 12) {
-            nameInfo.december.calculate(dayOfBirth, dayOfWeek)
+            nameInfo.december.calculate(dayOfBirth, dayOfWeek, radioBtn)
         }
 })
 
@@ -665,23 +722,179 @@ $(document).ready(function() {
         const decLastNames = Object.values(nameInfo.december.week)
 
         const janFirstNames = Object.values(nameInfo.january.day)
+        const janFemaleFirstNames = janFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const janMaleFirstNames = janFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const febFirstNames = Object.values(nameInfo.february.day)
+        const febFemaleFirstNames = febFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const febMaleFirstNames = febFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const marchFirstNames = Object.values(nameInfo.march.day)
+        const marchFemaleFirstNames = febFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const marchMaleFirstNames = marchFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const aprilFirstNames = Object.values(nameInfo.april.day)
+        const aprilFemaleFirstNames = aprilFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const aprilMaleFirstNames = aprilFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const mayFirstNames = Object.values(nameInfo.may.day)
+        const mayFemaleFirstNames = mayFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const mayMaleFirstNames = mayFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const juneFirstNames = Object.values(nameInfo.june.day)
+        const juneFemaleFirstNames = juneFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const juneMaleFirstNames = juneFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const julyFirstNames = Object.values(nameInfo.july.day)
+        const julyFemaleFirstNames = julyFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const julyMaleFirstNames = julyFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const augFirstNames = Object.values(nameInfo.august.day)
+        const augFemaleFirstNames = augFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const augMaleFirstNames = augFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const septFirstNames = Object.values(nameInfo.september.day)
+        const septFemaleFirstNames = septFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const septMaleFirstNames = septFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const octFirstNames = Object.values(nameInfo.october.day)
+        const octFemaleFirstNames = octFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const octMaleFirstNames = octFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const novFirstNames = Object.values(nameInfo.november.day)
+        const novFemaleFirstNames = novFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const novMaleFirstNames = novFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
         const decFirstNames = Object.values(nameInfo.december.day)
+        const decFemaleFirstNames = decFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ female }))(currentDate);
+            name = name.female;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+        const decMaleFirstNames = decFirstNames.reduce((finalArr, currentDate) => {
+            let name = (({ male, female }) => ({ male }))(currentDate);
+            name = name.male;
+            finalArr.push(name);
+            return finalArr;
+        }, []);
+
+        firstNameArray.push(janFemaleFirstNames, janMaleFirstNames, febFemaleFirstNames, febMaleFirstNames, marchFemaleFirstNames, marchMaleFirstNames, aprilFemaleFirstNames, aprilMaleFirstNames, mayFemaleFirstNames, mayMaleFirstNames, juneFemaleFirstNames, juneMaleFirstNames, julyFemaleFirstNames, julyMaleFirstNames, augFemaleFirstNames, augMaleFirstNames, septFemaleFirstNames, septMaleFirstNames, octFemaleFirstNames, octMaleFirstNames, novFemaleFirstNames, novMaleFirstNames, decFemaleFirstNames, decMaleFirstNames)
 
         lastNameArray.push(janLastNames, febLastNames, marchLastNames, aprilLastNames, mayLastNames, juneLastNames, julyLastNames, augLastNames, septLastNames, octLastNames, novLastNames, decLastNames)
         newLastArray = lastNameArray[Math.floor(Math.random()*lastNameArray.length)]
         randomLastName = newLastArray[Math.floor(Math.random()*newLastArray.length)]
 
-        firstNameArray.push(janFirstNames, febFirstNames, marchFirstNames, aprilFirstNames, mayFirstNames, juneFirstNames, julyFirstNames, augFirstNames, septFirstNames, octFirstNames, novFirstNames, decFirstNames)
         newFirstArray = firstNameArray[Math.floor(Math.random()*firstNameArray.length)]
         randomFirstName = newFirstArray[Math.floor(Math.random()*newFirstArray.length)]
 
