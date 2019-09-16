@@ -172,7 +172,7 @@ $(document).ready(function() {
                 7:  "Goldenstar"
             },
             day: {
-                1:  {female: "Dawm",  male: "Ace" },
+                1:  {female: "Dawn",  male: "Ace" },
                 2:  {female: "Rowan", male: "Rowan" },
                 3:  {female: "Lynette", male: "Finian" },
                 4:  {female: "Alexa", male: "Alexander"},
